@@ -12,7 +12,10 @@
 
 
 */
-
+.navbar-right{
+    position: relative;
+    float: right;
+}
 
 /*.separador_ondulado {
     position: absolute;

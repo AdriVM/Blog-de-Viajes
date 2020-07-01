@@ -1,17 +1,20 @@
 <?php
 
 
-
+// SCRIPTS
 function blogviajes_scripts(){
     wp_enqueue_script('jquery');
 
      /* BOOTSTRAP */
      wp_enqueue_script('bootstrapJS', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', array('jquery'), '4.5.0', true);
+
+     //SCRIPTS
+     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'blogviajes_scripts');
 
 
-
+//STYLES
 function blogviajes_styles() {
 
     /* NORMALIZE */
@@ -25,3 +28,9 @@ function blogviajes_styles() {
 }
 
 add_action('wp_enqueue_scripts', 'blogviajes_Styles');
+
+
+//AÑADIMOS SOPORTE DE MENUS AL TEMA
+register_nav_menus( array(
+    'menu_principal' => __('Menu Principal', 'blogviajes')
+) );
