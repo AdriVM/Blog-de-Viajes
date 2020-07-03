@@ -34,3 +34,6 @@ add_action('wp_enqueue_scripts', 'blogviajes_Styles');
 register_nav_menus( array(
     'menu_principal' => __('Menu Principal', 'blogviajes')
 ) );
+
+//AÑADIMOS SOPORTE DE IMAGEN DESTACADA AK TEMA
+add_theme_support( 'post-thumbnails' );

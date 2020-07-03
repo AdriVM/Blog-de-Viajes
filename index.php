@@ -2,10 +2,16 @@
 
 get_header();
 
+?>
+<section class="container">
+    <div class="row">
 
+        <?php
 echo "¡Hola Amigos!";
-
-
+?>
+    </div>
+</section>
+<?php
 get_footer();
 ?>
 <!--<svg preserveAspectRatio="none" width="1440" height="74" viewBox="0 0 1440 74" class="separador_ondulado">
