@@ -23,6 +23,10 @@ function blogviajes_styles() {
     /* BOOTSTRAP */
     wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',array(), '4.5.0');
 
+    /* GOOGLE FONTS */
+    wp_enqueue_style('ralewayFont', 'https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap', array(),'1.0.0');
+    wp_enqueue_style('baskervilleFont', 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap', array(), '1.0.0');
+
     /* STYLE.CSS */
     wp_enqueue_style('style', get_stylesheet_uri());
 }
@@ -37,3 +41,6 @@ register_nav_menus( array(
 
 //AÑADIMOS SOPORTE DE IMAGEN DESTACADA AK TEMA
 add_theme_support( 'post-thumbnails' );
+
+/* TAMAÑOS DE IMAGEN */
+add_image_size('entradas', 750, 490, true);

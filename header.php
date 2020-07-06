@@ -13,6 +13,7 @@
         $destacada = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
         $fondo = $destacada[0];
     ?>
+
     <header class="site-header" style="background-image: url(<?php echo $fondo ?>);">
 
         <nav class="navbar navbar-expand-lg navegacion">
@@ -49,4 +50,3 @@
             </div><!-- Cierre row -->
         </div><!-- Cierre container -->
     </header>
-    <div class="clearfix"></div>
