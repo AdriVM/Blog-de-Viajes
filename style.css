@@ -16,6 +16,11 @@
 --fondoMenuPrincipal: #235ac0;
 --textoMenuPrincipal: #ffffff;
 --textoMenuPrincipalHover: #d1d1d1;
+--colorFondo: #f2f2f2f2;
+}
+
+body{
+    background-color: var(--colorFondo);
 }
 
 h1, h2, h3, h4, h5{
@@ -24,14 +29,26 @@ h1, h2, h3, h4, h5{
     margin-bottom: 20px;
 }
 
+/* Si se quita el separador ondulado, descomentar el margin-bottom del .site-header*/
+.separador_ondulado{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+.separador_ondulado polygon{
+    fill: var(--colorFondo);
+}
+
 .site-header{
     position: relative;
     width: 100%;
     padding-top: 50px;
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .home .site-header{
@@ -139,3 +156,38 @@ span.navbar-toggler-icon{
     fill: hsl(210deg, 30%, 8%);
     transition: fill 350ms ease 0s;
 }*/
+
+
+/** FRONT-PAGE: SECCION --> ULTIMAS ENTRADAS**/
+section.contenido .entrada{
+    margin-bottom: 20px;
+}
+div.contenido-entrada{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    min-height: 270px;
+}
+div.contenido-entrada h3{
+    margin: 0;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 30px;
+}
+div.contenido-entrada p{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+div.contenido-entrada span{
+    font-weight: bold;
+    color:rgba(95, 95, 95, 1);
+}
+div.contenido-entrada .btn.btn-primary{
+    border-radius: 0;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 50px;
+}
