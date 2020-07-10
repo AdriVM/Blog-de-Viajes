@@ -16,7 +16,9 @@
 --fondoMenuPrincipal: #235ac0;
 --textoMenuPrincipal: #ffffff;
 --textoMenuPrincipalHover: #d1d1d1;
---colorFondo: #f2f2f2f2;
+--colorFondo: #f2f2f2;
+--colorBotonesYEnlaces: #007bff;
+--colorBotonesYEnlacesHover: rgba(78, 126, 81, 0.75);
 }
 
 body{
@@ -27,6 +29,12 @@ h1, h2, h3, h4, h5{
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+.btn{
+    background-color: var(--colorBotonesYEnlaces);
+}
+.btn:hover{
+    background-color: var(--colorBotonesYEnlacesHover);
 }
 
 /* Si se quita el separador ondulado, descomentar el margin-bottom del .site-header*/
@@ -191,3 +199,31 @@ div.contenido-entrada .btn.btn-primary{
     font-weight: bold;
     padding: 15px 50px;
 }
+
+/** FRONT-PAGE: SECCION --> ENTRADAS POR CATEGORIA**/
+section.categorias-blog .categoria{
+    text-align: center;
+    background-color: white;
+    background-clip: content-box;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+section.categorias-blog .categoria a:hover{
+    text-decoration: none;
+}
+section.categorias-blog .categoria a svg{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 60px;
+}
+section.categorias-blog .categoria a{
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    color: var(--colorBotonesYEnlaces);
+}
+
+section.categorias-blog .categoria a:hover{
+    color: var(--colorBotonesYEnlacesHover);
+}
+   
+
