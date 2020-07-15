@@ -1,3 +1,17 @@
+/*
+    Theme Name: Blog de Viajes
+    Theme URI: 
+    Author: Adrián Vázquez Mirasierra
+    Author URI:
+    Description: Theme diseñado para el Blog de Viajes
+    Version: 1.0.0
+    Licence: GNU General Public License V2 or later
+    Licence URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: Blog, Viajes, responsive, posts
+    Text Domain: BlogViajes
+
+
+*/
 :root {
     --fondoMenuPrincipal: #235ac0;
     --textoMenuPrincipal: #ffffff;
