@@ -1,4 +1,4 @@
-<?php get_header('blog'); ?>
+<?php get_header(); ?>
 <section class="container contenido">
     <div class="row">
         <?php 

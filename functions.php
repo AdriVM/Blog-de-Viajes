@@ -42,7 +42,8 @@ add_action('wp_enqueue_scripts', 'blogviajes_Styles');
 
 //AÑADIMOS SOPORTE DE MENUS AL TEMA
 register_nav_menus( array(
-    'menu_principal' => __('Menu Principal', 'blogviajes')
+    'menu_principal' => __('Menu Principal', 'blogviajes'),
+    'sociales_menu' => __('Menu Redes Sociales', 'blogviajes')
 ) );
 
 // WIDGET
@@ -52,6 +53,16 @@ function blogviajes_widgets(){
         'id' => __('footer_widget'),
         'description' => 'widgets para el footer',
         'before_widget' => '<div id="&1$s" class="widget col-6 %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+
+    ));
+    register_sidebar(array(
+        'name' => __('Sidebar Widgets'),
+        'id' => __('sidebar_widgets'),
+        'description' => 'widgets para el sidebar',
+        'before_widget' => '<div id="&1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>'

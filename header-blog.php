@@ -10,7 +10,9 @@
 
 <body <?php body_class(); ?>>
     <?php 
-        $destacada = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+        $pagina_blog = get_option( 'page_for_posts' );
+        $id_imagen = get_post_thumbnail_id( $pagina_blog );
+        $destacada = wp_get_attachment_image_src($id_imagen, 'full');
         $fondo = $destacada[0];
     ?>
 
@@ -43,29 +45,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="titulo">
-                        <?php if(is_front_page()): ?>
-                        <?php $descripcion = get_bloginfo('description', 'display')?>
-                        <h1 class="site-title"><span><?php echo $descripcion;?></span></h1>
-                        <?php elseif(is_category()): ?>
-                        <h1 class="site-title"><span><?php the_archive_title(); ?></span></h1>
-                        <?php else: ?>
-                        <h1 class="site-title"><span><?php the_title();?></span></h1>
-                        <?php endif; ?>
+
+                        <?php 
+                            $pagina_blog = get_option( 'page_for_posts' );
+                            $titulo = get_the_title( $pagina_blog );
+                        ?>
+                        <h1 class="site-title"><span><?php echo $titulo;?></span></h1>
                     </div><!-- Cierre titulo -->
                 </div><!-- Cierre col-md-6 -->
             </div><!-- Cierre row -->
         </div><!-- Cierre container -->
-        <?php if(is_front_page()): ?>
-        <svg preserveAspectRatio="none" width="1440" height="74" viewBox="0 0 100 10" class="separador_ondulado">
-            <?php  // path 0 0 1440 74?>
-            <?php //polygon  0 0 100 10?>
-            <!--<path
-                
-                
-                    d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z">
-                </path>-->
-            <!--<polygon points="100 0 100 10 0 10 0 0 100 10 0 10" /><?php //pico hacia addentro ?>-->
-            <polygon points="50 0, 0 10, 100 10" /> <?php //pico hacia afuera ?>
-        </svg>
-        <?php endif; ?>
     </header>
